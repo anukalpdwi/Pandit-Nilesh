@@ -84,18 +84,22 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-spiritual">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <span className="text-orange-600 font-bold uppercase tracking-widest">ॐ {t.services.title} ॐ</span>
-          <h1 className="text-4xl md:text-6xl font-bold mt-4 text-gray-900">{t.services.subtitle}</h1>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
+    <div className="bg-spiritual">
+      {/* Hero Header - Dark for navbar visibility */}
+      <div className="bg-maroon-900 pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('/pattern.png')]"></div>
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-gold-400 font-bold uppercase tracking-widest text-sm">ॐ {t.services.title} ॐ</span>
+          <h1 className="text-4xl md:text-6xl font-serif font-black mt-4 text-white">{t.services.subtitle}</h1>
+          <p className="text-cream-200 mt-6 max-w-2xl mx-auto text-lg">
             {lang === 'en'
               ? 'Trimbakeshwar is the only place where all these sacred rituals can be performed according to Vedic traditions.'
               : 'त्र्यंबकेश्वर एकमात्र स्थान है जहां ये सभी पवित्र अनुष्ठान वैदिक परंपराओं के अनुसार किए जा सकते हैं।'}
           </p>
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* Quick Booking Banner */}
         <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-6 md:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -139,7 +143,7 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
 
               <div className="w-full lg:w-1/2 space-y-6">
                 <div className="flex items-center space-x-4">
-                  <h2 className="text-3xl md:text-4xl font-bold text-red-900">{puja.name}</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-900">{puja.name}</h2>
                 </div>
 
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -148,18 +152,18 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
 
                 {/* Duration & Muhurat */}
                 <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center space-x-2 bg-orange-50 px-4 py-2 rounded-full">
-                    <Clock size={18} className="text-orange-600" />
+                  <div className="flex items-center space-x-2 bg-saffron-50 px-4 py-2 rounded-full border border-saffron-100">
+                    <Clock size={18} className="text-saffron-600" />
                     <span className="text-sm font-medium text-gray-700">{puja.duration}</span>
                   </div>
                   <div className="flex items-center space-x-2 bg-orange-50 px-4 py-2 rounded-full">
-                    <Calendar size={18} className="text-orange-600" />
+                    <Calendar size={18} className="text-saffron-600" />
                     <span className="text-sm font-medium text-gray-700">{puja.muhurat}</span>
                   </div>
                 </div>
 
                 {/* Benefits */}
-                <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl border border-orange-100">
+                <div className="bg-gradient-to-br from-saffron-50 to-white p-6 rounded-2xl border border-saffron-100">
                   <h4 className="font-bold text-gray-900 mb-4 flex items-center space-x-2">
                     <CheckCircle2 size={20} className="text-green-600" />
                     <span>{lang === 'en' ? 'Benefits of this Puja:' : 'इस पूजा के लाभ:'}</span>
@@ -173,7 +177,7 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
                 <div className="grid grid-cols-2 gap-3">
                   {puja.includes.map((item, i) => (
                     <div key={i} className="flex items-center space-x-2 text-sm text-gray-600">
-                      <CheckCircle2 size={16} className="text-orange-600" />
+                      <CheckCircle2 size={16} className="text-saffron-600" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -189,14 +193,14 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
                   </a>
                   <button
                     onClick={() => handleBookPuja(puja.name)}
-                    className="flex-1 w-full sm:w-auto bg-gradient-to-r from-red-800 to-orange-600 text-white px-8 py-4 rounded-full font-bold hover:from-red-900 hover:to-orange-700 shadow-xl transition-all flex items-center justify-center space-x-2"
+                    className="flex-1 w-full sm:w-auto bg-gradient-to-r from-maroon-800 to-saffron-600 text-white px-8 py-4 rounded-full font-bold hover:from-maroon-900 hover:to-saffron-700 shadow-xl transition-all flex items-center justify-center space-x-2"
                   >
                     <span>{t.services.bookThis}</span>
                     <MessageCircle size={20} />
                   </button>
                   <Link
                     to={`/services/${puja.id}`}
-                    className="flex-1 w-full sm:w-auto bg-white border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-orange-50 transition-all flex items-center justify-center space-x-2"
+                    className="flex-1 w-full sm:w-auto bg-white border-2 border-saffron-600 text-saffron-600 px-8 py-4 rounded-full font-bold hover:bg-saffron-50 transition-all flex items-center justify-center space-x-2"
                   >
                     <span>{lang === 'en' ? 'Read Details' : 'विवरण पढ़ें'}</span>
                     <ChevronRight size={20} />
@@ -211,8 +215,8 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
         <div className="mt-32">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <IndianRupee className="text-orange-600" size={28} />
-              <span className="text-orange-600 font-bold uppercase tracking-widest">{t.pricing.title}</span>
+              <IndianRupee className="text-saffron-600" size={28} />
+              <span className="text-saffron-600 font-bold uppercase tracking-widest text-sm">{t.pricing.title}</span>
             </div>
             <h2 className="text-4xl font-bold text-gray-900">{t.pricing.subtitle}</h2>
           </div>
@@ -220,7 +224,7 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-red-800 to-orange-600 text-white">
+                <thead className="bg-gradient-to-r from-maroon-800 to-saffron-600 text-white">
                   <tr>
                     <th className="px-6 py-5 text-left font-bold">{lang === 'en' ? 'Puja Name' : 'पूजा का नाम'}</th>
                     <th className="px-6 py-5 text-left font-bold">{lang === 'en' ? 'Duration' : 'अवधि'}</th>
@@ -246,7 +250,7 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
                 </tbody>
               </table>
             </div>
-            <div className="p-6 bg-orange-50 text-center">
+            <div className="p-6 bg-saffron-50 text-center">
               <p className="text-gray-600 text-sm">{t.pricing.includes}</p>
               <p className="text-gray-500 text-xs mt-2 italic">{t.pricing.note}</p>
             </div>
@@ -257,8 +261,8 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
         <div className="mt-32">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <HelpCircle className="text-orange-600" size={28} />
-              <span className="text-orange-600 font-bold uppercase tracking-widest">{t.faq.title}</span>
+              <HelpCircle className="text-saffron-600" size={28} />
+              <span className="text-saffron-600 font-bold uppercase tracking-widest text-sm">{t.faq.title}</span>
             </div>
             <h2 className="text-4xl font-bold text-gray-900">{t.faq.subtitle}</h2>
           </div>
@@ -267,18 +271,18 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
             {FAQS.map((faq, idx) => (
               <div
                 key={idx}
-                className={`bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all ${openFaq === idx ? 'ring-2 ring-orange-500' : 'hover:border-orange-200'}`}
+                className={`bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all ${openFaq === idx ? 'ring-2 ring-saffron-500' : 'hover:border-saffron-200'}`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full px-8 py-6 flex items-center justify-between text-left"
                 >
                   <div className="flex items-start space-x-4">
-                    <HelpCircle className="text-orange-600 flex-shrink-0 mt-0.5" size={24} />
+                    <HelpCircle className="text-saffron-600 flex-shrink-0 mt-0.5" size={24} />
                     <h3 className="text-lg font-bold text-gray-900">{faq.q}</h3>
                   </div>
                   <ChevronDown
-                    className={`text-orange-600 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
+                    className={`text-saffron-600 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
                     size={24}
                   />
                 </button>
@@ -291,13 +295,13 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-24 bg-gradient-to-r from-red-900 to-orange-700 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+        <div className="mt-24 bg-gradient-to-r from-maroon-900 to-saffron-700 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik00MCAwQzE3LjkgMCAwIDE3LjkgMCA0MHMxNy45IDQwIDQwIDQwIDQwLTE3LjkgNDAtNDBTNjIuMSAwIDQwIDB6bTAgNzBjLTE2LjUgMC0zMC0xMy41LTMwLTMwczEzLjUtMzAgMzAtMzAgMzAgMTMuNSAzMCAzMC0xMy41IDMwLTMwIDMweiIvPjwvZz48L2c+PC9zdmc+')]"></div>
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">
               {lang === 'en' ? 'Not Sure Which Puja You Need?' : 'सुनिश्चित नहीं हैं कि आपको कौन सी पूजा चाहिए?'}
             </h3>
-            <p className="text-orange-200 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-saffron-200 text-lg mb-8 max-w-2xl mx-auto">
               {lang === 'en'
                 ? 'Send us your birth details and we\'ll analyze your kundali to recommend the right puja for you. Free consultation!'
                 : 'हमें अपने जन्म विवरण भेजें और हम आपके लिए सही पूजा की सिफारिश करने के लिए आपकी कुंडली का विश्लेषण करेंगे। मुफ्त परामर्श!'}
@@ -307,7 +311,7 @@ const Services: React.FC<ServicesProps> = ({ lang, setActivePage }) => {
                 href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(lang === 'en' ? 'Namaste! I need help identifying which puja is right for me. My birth details are:' : 'नमस्ते! मुझे यह पहचानने में मदद चाहिए कि मेरे लिए कौन सी पूजा सही है। मेरे जन्म विवरण हैं:')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-red-900 px-8 py-4 rounded-full font-bold hover:bg-orange-100 transition-colors shadow-xl flex items-center space-x-2"
+                className="bg-white text-maroon-900 px-8 py-4 rounded-full font-bold hover:bg-saffron-100 transition-colors shadow-xl flex items-center space-x-2"
               >
                 <MessageCircle size={20} />
                 <span>{lang === 'en' ? 'Get Free Kundali Analysis' : 'मुफ्त कुंडली विश्लेषण प्राप्त करें'}</span>

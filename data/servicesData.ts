@@ -3,11 +3,11 @@ export const SERVICES_CONTENT = {
     'kaal-sarp-dosh-puja': {
         title: 'Kaal Sarp Puja Trimbakeshwar | Best Pandit for Kaal Sarp Dosh Nivaran',
         keyword: 'trimbakeshwar kalsarp pooja booking, kaal sarp puja in trimbakeshwar cost, kalsarp pooja nashik, best pandit for kaal sarp puja in trimbakeshwar',
-        description: 'Official Booking for Kaal Sarp Puja at Trimbakeshwar Temple. Know the Kaal Sarp Puja cost, muhurat, and vidhi. Performed by Best Pandit Shivnarayan Guruji (Nashik).',
+        description: 'Official Booking for Kaal Sarp Puja at Trimbakeshwar Temple. Know the Kaal Sarp Puja cost, muhurat, and vidhi. Performed by Best Pandit Nilesh Guruji (Nashik).',
         heroImage: '/kaalsarp.jpeg',
         content: {
             heading: 'Kaal Sarp Dosh Nivaran Puja at Trimbakeshwar',
-            intro: 'Trimbakeshwar Jyotirlinga is the ultimate destination for "Kaal Sarp Dosh Nivaran Puja". Devotees from across the globe visit here for "trimbakeshwar kalsarp pooja booking" to get rid of the dosha that causes career obstacles, delayed marriage, and financial instability. Pandit Shivnarayan Guruji is regarded as the "Best Pandit for Kaal Sarp Puja in Trimbakeshwar" due to his profound Vedic knowledge and 100% satisfaction record.',
+            intro: 'Trimbakeshwar Jyotirlinga is the ultimate destination for "Kaal Sarp Dosh Nivaran Puja". Devotees from across the globe visit here for "trimbakeshwar kalsarp pooja booking" to get rid of the dosha that causes career obstacles, delayed marriage, and financial instability. Pandit Nilesh Guruji is regarded as the "Best Pandit for Kaal Sarp Puja in Trimbakeshwar" due to his profound Vedic knowledge and 100% satisfaction record.',
             significance: [
                 'Complete removal of Kaal Sarp Dosha from the horoscope.',
                 'Essential for "kalsarp pooja nashik" devotees seeking instant relief.',
@@ -25,11 +25,11 @@ export const SERVICES_CONTENT = {
             },
             {
                 question: 'How to do Trimbakeshwar Kalsarp Pooja Booking?',
-                answer: 'For "trimbakeshwar kalsarp pooja booking", simply call Pandit Shivnarayan Guruji at +91 9767443308. We handle all arrangements including stay and food.'
+                answer: 'For "trimbakeshwar kalsarp pooja booking", simply call Pandit Nilesh Guruji at +91 8956270196. We handle all arrangements including stay and food.'
             },
             {
                 question: 'Who is the Best Pandit for Kaal Sarp Puja in Trimbakeshwar?',
-                answer: 'Pandit Shivnarayan Guruji is widely considered the "Best Pandit Trimbakeshwar" for Kaal Sarp and "rahu ketu pooja in trimbakeshwar" due to his Tamrapatra rights and years of experience.'
+                answer: 'Pandit Nilesh Guruji is widely considered the "Best Pandit Trimbakeshwar" for Kaal Sarp and "rahu ketu pooja in trimbakeshwar" due to his Tamrapatra rights and years of experience.'
             }
         ]
     },
@@ -69,7 +69,7 @@ export const SERVICES_CONTENT = {
         heroImage: '/images/pitra.png',
         content: {
             heading: 'Pitra Dosh Nivaran Puja: Honoring Your Ancestors',
-            intro: '"Pitra Dosh Trimbakeshwar" rituals are essential when one faces repeated failures, lack of peace, or health issues due to ancestral dissatisfaction. Pandit Shivnarayan, a renowned "Nashik Pandit", specializes in "pitra dosh puja in trimbakeshwar" to convert Pitra Dosh into Pitra Aashirwad (Blessings).',
+            intro: '"Pitra Dosh Trimbakeshwar" rituals are essential when one faces repeated failures, lack of peace, or health issues due to ancestral dissatisfaction. Pandit Nilesh, a renowned "Nashik Pandit", specializes in "pitra dosh puja in trimbakeshwar" to convert Pitra Dosh into Pitra Aashirwad (Blessings).',
             significance: [
                 'Ensures success and well-being of children.',
                 'Removes constant family quarrels and unrest.',
@@ -90,7 +90,7 @@ export const SERVICES_CONTENT = {
     'tripindi-shradh': {
         title: 'Tripindi Shradh Trimbakeshwar | Moksha for Ancestors',
         keyword: 'Tripindi Shradh, pitra dosh puja in trimbakeshwar, nashik puja, trimbakeshwar pooja cost',
-        description: 'Perform Tripindi Shradh at Trimbakeshwar to satisfy unsatisfied souls of ancestors. Expert Pandit Shivnarayan. Book Now.',
+        description: 'Perform Tripindi Shradh at Trimbakeshwar to satisfy unsatisfied souls of ancestors. Expert Pandit Nilesh. Book Now.',
         heroImage: '/images/tripindi.png',
         content: {
             heading: 'Tripindi Shradh: Liberating Souls from Three Generations',
@@ -114,7 +114,7 @@ export const SERVICES_CONTENT = {
     'maha-mrityunjay-jaap': {
         title: 'Maha Mrityunjay Jaap Trimbakeshwar | Health & Longevity',
         keyword: 'Maha Mrityunjay Jaap, trimbakeshwar pooja, nashik pandit, puja at trimbakeshwar',
-        description: 'Powerful Maha Mrityunjay Jaap at Trimbakeshwar Jyotirlinga for health and longevity. Book dedicated Brahmin chants with Pandit Shivnarayan.',
+        description: 'Powerful Maha Mrityunjay Jaap at Trimbakeshwar Jyotirlinga for health and longevity. Book dedicated Brahmin chants with Pandit Nilesh.',
         heroImage: '/images/mahamrityunjay.png',
         content: {
             heading: 'Maha Mrityunjay Jaap: The Victory Over Death',

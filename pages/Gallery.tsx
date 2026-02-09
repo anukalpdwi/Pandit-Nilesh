@@ -47,13 +47,17 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
   ];
 
   return (
-    <div className="pt-32 pb-24 bg-spiritual min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-orange-600 font-bold uppercase tracking-widest">{t.gallery.title}</span>
-          <h1 className="text-4xl md:text-6xl font-bold mt-4 text-gray-900">{t.gallery.subtitle}</h1>
+    <div className="bg-spiritual min-h-screen">
+      {/* Hero Header */}
+      <div className="bg-maroon-900 pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('/pattern.png')]"></div>
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-4">
+          <span className="text-gold-400 font-bold uppercase tracking-widest text-sm">{t.gallery.title}</span>
+          <h1 className="text-4xl md:text-6xl font-serif font-black mt-4 text-white">{t.gallery.subtitle}</h1>
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -62,8 +66,8 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all shadow-md hover:shadow-lg ${activeFilter === filter.key
-                  ? 'bg-gradient-to-r from-red-800 to-orange-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-orange-50'
+                ? 'bg-gradient-to-r from-maroon-800 to-saffron-600 text-white shadow-lg scale-105'
+                : 'bg-white text-maroon-900 border border-maroon-100 hover:bg-saffron-50 hover:border-saffron-200'
                 }`}
             >
               {filter.icon}
@@ -88,7 +92,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-end p-6">
                   <ZoomIn className="text-white mb-4" size={40} />
-                  <h3 className="text-white font-bold text-lg text-center">{item.title}</h3>
+                  <h3 className="text-white font-serif font-bold text-lg text-center drop-shadow-md">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -98,7 +102,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
         {/* Video Section */}
         {(activeFilter === 'all' || activeFilter === 'videos') && (
           <div className="mt-16">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+            <h2 className="text-3xl font-serif font-bold text-center mb-12 text-maroon-900">
               {lang === 'en' ? '📹 Sacred Ritual Videos' : '📹 पवित्र अनुष्ठान वीडियो'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -114,7 +118,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
                     className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform animate-pulse">
+                    <div className="w-20 h-20 bg-gradient-to-r from-maroon-600 to-saffron-500 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform animate-pulse">
                       <Play size={36} fill="white" className="text-white ml-1" />
                     </div>
                     <h3 className="text-white font-bold text-lg mt-6 text-center px-4">{video.title}</h3>
@@ -130,7 +134,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
         <div className="mt-20 bg-white rounded-3xl p-8 md:p-12 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-red-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-900 mb-6">
                 {lang === 'en' ? 'About Trimbakeshwar Temple' : 'त्र्यंबकेश्वर मंदिर के बारे में'}
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -140,7 +144,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center space-x-3">
-                  <span className="text-orange-600">✓</span>
+                  <span className="text-saffron-600">✓</span>
                   <span>{lang === 'en' ? 'One of 12 Sacred Jyotirlingas' : '12 पवित्र ज्योतिर्लिंगों में से एक'}</span>
                 </li>
                 <li className="flex items-center space-x-3">
@@ -163,7 +167,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
                 alt="Trimbakeshwar Temple"
                 className="rounded-3xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-red-800 to-orange-600 text-white p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-maroon-800 to-saffron-600 text-white p-6 rounded-2xl shadow-xl">
                 <span className="block text-3xl font-black">12th</span>
                 <span className="text-xs font-bold uppercase tracking-wider opacity-80">Jyotirlinga</span>
               </div>

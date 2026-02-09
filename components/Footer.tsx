@@ -21,15 +21,17 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white pt-20 pb-8">
+    <footer className="bg-maroon-900 text-white pt-20 pb-8 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#C5A059 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       {/* Top Section with CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="bg-gradient-to-r from-orange-600 to-red-700 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-gradient-to-r from-saffron-600 to-maroon-700 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 border border-gold-500/20 shadow-2xl">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-2">
               {lang === 'en' ? 'Ready to Book Your Puja?' : 'अपनी पूजा बुक करने के लिए तैयार हैं?'}
             </h3>
-            <p className="text-orange-100">
+            <p className="text-saffron-100">
               {lang === 'en' ? 'Get instant consultation via WhatsApp' : 'व्हाट्सएप के माध्यम से तुरंत परामर्श प्राप्त करें'}
             </p>
           </div>
@@ -37,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
             href={`https://wa.me/${PHONE_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 bg-white text-red-700 px-8 py-4 rounded-full font-bold hover:bg-orange-100 transition-colors shadow-lg shrink-0"
+            className="flex items-center space-x-2 bg-white text-maroon-800 px-8 py-4 rounded-full font-bold hover:bg-saffron-50 transition-colors shadow-lg shrink-0"
           >
             <MessageCircle size={24} />
             <span>{lang === 'en' ? 'Chat on WhatsApp' : 'व्हाट्सएप पर चैट करें'}</span>
@@ -45,37 +47,37 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
         {/* Brand */}
         <div className="space-y-6">
           <div className="flex items-center">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3 shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-saffron-500 to-maroon-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3 shadow-lg border border-gold-500/30">
               ॐ
             </div>
             <div>
-              <h2 className="text-xl font-bold">{t.hero.name}</h2>
-              <p className="text-xs text-orange-400 font-medium uppercase tracking-wider">Trimbakeshwar</p>
+              <h2 className="text-xl font-serif font-bold text-gold-400">{t.hero.name}</h2>
+              <p className="text-xs text-saffron-400 font-medium uppercase tracking-wider">Trimbakeshwar</p>
             </div>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-cream-200/60 text-sm leading-relaxed">
             {t.footer.tagline}
           </p>
-          <div className="flex items-center space-x-2 text-orange-400 text-sm">
+          <div className="flex items-center space-x-2 text-gold-400 text-sm">
             <Clock size={16} />
             <span>{lang === 'en' ? 'Available: 6 AM - 10 PM' : 'उपलब्ध: 6 AM - 10 PM'}</span>
           </div>
           <div className="flex space-x-3">
-            <a href="#" className="p-3 bg-gray-800 rounded-full hover:bg-orange-600 transition-colors">
+            <a href="#" className="p-3 bg-maroon-800/50 rounded-full hover:bg-saffron-600 transition-colors border border-maroon-700">
               <Instagram size={18} />
             </a>
-            <a href="#" className="p-3 bg-gray-800 rounded-full hover:bg-red-600 transition-colors">
+            <a href="#" className="p-3 bg-maroon-800/50 rounded-full hover:bg-red-600 transition-colors border border-maroon-700">
               <Youtube size={18} />
             </a>
             <a
               href={`https://wa.me/${PHONE_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gray-800 rounded-full hover:bg-green-600 transition-colors"
+              className="p-3 bg-maroon-800/50 rounded-full hover:bg-green-600 transition-colors border border-maroon-700"
             >
               <MessageCircle size={18} />
             </a>
@@ -84,11 +86,11 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-b border-orange-600/30 pb-2">{t.footer.quickLinks}</h3>
+          <h3 className="text-lg font-serif font-bold mb-6 border-b border-saffron-600/30 pb-2 text-gold-300">{t.footer.quickLinks}</h3>
           <ul className="space-y-3">
             {['home', 'about', 'services', 'gallery', 'blog', 'contact'].map((page) => (
               <li key={page}>
-                <Link to={page === 'home' ? '/' : `/${page}`} className="text-gray-400 hover:text-orange-500 transition-colors flex items-center space-x-2 capitalize">
+                <Link to={page === 'home' ? '/' : `/${page}`} className="text-cream-200/70 hover:text-saffron-400 transition-colors flex items-center space-x-2 capitalize">
                   <ChevronRight size={14} />
                   <span>{page}</span>
                 </Link>
@@ -99,7 +101,7 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-b border-orange-600/30 pb-2">{t.footer.services}</h3>
+          <h3 className="text-lg font-serif font-bold mb-6 border-b border-saffron-600/30 pb-2 text-gold-300">{t.footer.services}</h3>
           <ul className="space-y-3">
             {[
               { label: 'Kaal Sarp Dosh Puja', link: '/services/kaal-sarp-dosh-puja' },
@@ -112,9 +114,9 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
               <li key={idx}>
                 <Link
                   to={service.link}
-                  className="text-gray-400 hover:text-orange-500 transition-colors flex items-center space-x-2 text-sm"
+                  className="text-cream-200/70 hover:text-saffron-400 transition-colors flex items-center space-x-2 text-sm"
                 >
-                  <span className="text-orange-600">🕉️</span>
+                  <span className="text-saffron-600">🕉️</span>
                   <span>{service.label}</span>
                 </Link>
               </li>
@@ -124,22 +126,22 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-b border-orange-600/30 pb-2">{t.footer.contact}</h3>
+          <h3 className="text-lg font-serif font-bold mb-6 border-b border-saffron-600/30 pb-2 text-gold-300">{t.footer.contact}</h3>
           <ul className="space-y-4">
             <li>
               <a href={`tel:${PHONE_NUMBER}`} className="flex items-start space-x-3 group">
-                <div className="p-2 bg-gray-800 rounded-lg group-hover:bg-orange-600 transition-colors">
-                  <Phone className="text-orange-400 group-hover:text-white" size={16} />
+                <div className="p-2 bg-maroon-800/50 rounded-lg group-hover:bg-saffron-600 transition-colors border border-maroon-700">
+                  <Phone className="text-gold-400 group-hover:text-white" size={16} />
                 </div>
                 <div>
                   <span className="text-xs text-gray-500 block">{t.contact.callUs}</span>
-                  <span className="text-gray-300 font-medium">+{PHONE_NUMBER}</span>
+                  <span className="text-cream-100 font-medium">+{PHONE_NUMBER}</span>
                 </div>
               </a>
             </li>
             <li className="flex items-start space-x-3">
-              <div className="p-2 bg-gray-800 rounded-lg">
-                <MapPin className="text-orange-400" size={16} />
+              <div className="p-2 bg-maroon-800/50 rounded-lg border border-maroon-700">
+                <MapPin className="text-gold-400" size={16} />
               </div>
               <div>
                 <span className="text-xs text-gray-500 block">{t.contact.location}</span>

@@ -19,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
     image = "/temple.png",
     schema
 }) => {
-    const siteTitle = "Pandit Shivnarayan Guruji | Trimbakeshwar Pujari";
+    const siteTitle = "Pandit Nilesh Guruji | Trimbakeshwar Pujari";
     const finalTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const finalDescription = description || "Official Trimbakeshwar Purohit for Kaal Sarp Puja, Narayan Nagbali, and Pitra Dosh Nivaran. 15+ Years of Experience. Call for Booking.";
 

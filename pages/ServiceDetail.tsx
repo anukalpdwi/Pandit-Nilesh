@@ -22,9 +22,9 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
 
     if (!service) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-orange-50 p-4">
-                <h2 className="text-2xl font-bold text-red-800 mb-4">Service Not Found</h2>
-                <Link to="/services" className="px-6 py-3 bg-orange-600 text-white rounded-full">Back to Services</Link>
+            <div className="min-h-screen flex flex-col items-center justify-center bg-saffron-50 p-4">
+                <h2 className="text-2xl font-serif font-bold text-maroon-900 mb-4">Service Not Found</h2>
+                <Link to="/services" className="px-6 py-3 bg-saffron-600 text-white rounded-full">Back to Services</Link>
             </div>
         );
     }
@@ -49,7 +49,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
         "name": service.title,
         "provider": {
             "@type": "LocalBusiness",
-            "name": "Pandit Shivnarayan Guruji",
+            "name": "Pandit Nilesh Guruji",
             "telephone": PHONE_NUMBER,
             "priceRange": "₹₹",
             "image": "https://trimbakeshwarpujari.in/images/pandit.png",
@@ -94,21 +94,21 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
             <SEO
                 title={service.title}
                 description={service.description}
-                keywords={service.keyword + ", Trimbakeshwar Puja, Pandit Shivnarayan Guruji"}
+                keywords={service.keyword + ", Trimbakeshwar Puja, Pandit Nilesh Guruji"}
                 image={service.heroImage}
                 url={`https://trimbakeshwarpujari.in/services/${slug}`}
                 schema={JSON.stringify([faqSchema, serviceSchema])}
             />
 
-            <div className="min-h-screen bg-gray-50 pt-20">
+            <div className="min-h-screen bg-spiritual pt-20">
                 {/* Breadcrumb - Helpful for SEO */}
                 <div className="bg-white border-b border-gray-100 py-3">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-500">
-                        <Link to="/" className="hover:text-orange-600">Home</Link>
+                        <Link to="/" className="hover:text-saffron-600">Home</Link>
                         <span className="mx-2">/</span>
-                        <Link to="/services" className="hover:text-orange-600">Services</Link>
+                        <Link to="/services" className="hover:text-saffron-600">Services</Link>
                         <span className="mx-2">/</span>
-                        <span className="text-orange-600 font-medium">{service.content.heading}</span>
+                        <span className="text-saffron-600 font-medium">{service.content.heading}</span>
                     </div>
                 </div>
 
@@ -121,16 +121,16 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
-                            <span className="bg-orange-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                            <span className="bg-saffron-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block shadow-lg">
                                 Premium Vedic Service
                             </span>
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-black text-white mb-4 leading-tight drop-shadow-md">
                                 {service.content.heading}
                             </h1>
                             <div className="flex flex-wrap gap-4 text-white/90 text-sm md:text-base font-medium">
-                                <span className="flex items-center gap-2"><MapPin size={18} className="text-orange-400" /> Trimbakeshwar Temple</span>
-                                <span className="flex items-center gap-2"><Clock size={18} className="text-orange-400" /> 3-4 Hours Ritual</span>
-                                <span className="flex items-center gap-2"><User size={18} className="text-orange-400" /> By Pandit Shivnarayan Guruji</span>
+                                <span className="flex items-center gap-2"><MapPin size={18} className="text-saffron-400" /> Trimbakeshwar Temple</span>
+                                <span className="flex items-center gap-2"><Clock size={18} className="text-saffron-400" /> 3-4 Hours Ritual</span>
+                                <span className="flex items-center gap-2"><User size={18} className="text-saffron-400" /> By Pandit Nilesh Guruji</span>
                             </div>
                         </div>
                     </div>
@@ -144,8 +144,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
 
                             {/* Introduction - Keyword Rich */}
                             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                    <span className="w-10 h-1 bg-orange-500 rounded-full"></span>
+                                <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                    <span className="w-10 h-1 bg-saffron-500 rounded-full"></span>
                                     Significance of the Puja
                                 </h2>
                                 <p className="text-gray-700 leading-relaxed text-lg">
@@ -154,8 +154,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
                             </div>
 
                             {/* Benefits */}
-                            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl border border-orange-100">
-                                <h3 className="text-xl font-bold text-gray-900 mb-6">Key Benefits</h3>
+                            <div className="bg-gradient-to-br from-saffron-50 to-white p-8 rounded-3xl border border-saffron-100">
+                                <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Key Benefits</h3>
                                 <div className="grid gap-4">
                                     {service.content.significance.map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-4">
@@ -170,8 +170,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
 
                             {/* Ritual Process */}
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-6">Puja Vidhi (Process)</h3>
-                                <div className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-orange-500">
+                                <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Puja Vidhi (Process)</h3>
+                                <div className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-saffron-500">
                                     <p className="text-gray-700 whitespace-pre-line leading-relaxed">
                                         {service.content.process}
                                     </p>
@@ -181,7 +181,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
                             {/* FAQs */}
                             {service.faq && service.faq.length > 0 && (
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h3>
+                                    <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Frequently Asked Questions</h3>
                                     <div className="space-y-4">
                                         {service.faq.map((f, i) => (
                                             <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
@@ -204,16 +204,16 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
 
                                 {/* Booking Card */}
                                 <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 shadow-lg">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-saffron-500 to-maroon-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 shadow-lg border border-gold-400/30">
                                         ॐ
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Book This Puja</h3>
+                                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">Book This Puja</h3>
                                     <p className="text-gray-500 mb-6">Get expert guidance & muhurat</p>
 
                                     <div className="space-y-3">
                                         <a
                                             href={`tel:${PHONE_NUMBER}`}
-                                            className="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold hover:shadow-lg hover:scale-[1.02] transition-all"
+                                            className="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-saffron-600 to-maroon-700 text-white py-4 rounded-xl font-bold hover:shadow-lg hover:scale-[1.02] transition-all"
                                         >
                                             <Phone size={20} className="animate-pulse" />
                                             <span>Call Now</span>
@@ -238,13 +238,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ lang }) => {
                                 </div>
 
                                 {/* Why Choose Us Minimal */}
-                                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                                    <h4 className="font-bold text-gray-800 mb-4">Why Pandit Shivnarayan?</h4>
+                                <div className="bg-saffron-50 p-6 rounded-2xl border border-saffron-100">
+                                    <h4 className="font-bold text-gray-800 mb-4">Why Pandit Nilesh?</h4>
                                     <ul className="space-y-3 text-sm text-gray-600">
-                                        <li className="flex gap-2"><CheckCircle size={16} className="text-orange-500" /> 15+ Years Experience</li>
-                                        <li className="flex gap-2"><CheckCircle size={16} className="text-orange-500" /> Pure Vedic Rituals</li>
-                                        <li className="flex gap-2"><CheckCircle size={16} className="text-orange-500" /> Transparent Dakshina</li>
-                                        <li className="flex gap-2"><CheckCircle size={16} className="text-orange-500" /> Complete Satisfaction</li>
+                                        <li className="flex gap-2"><CheckCircle size={16} className="text-saffron-500" /> 15+ Years Experience</li>
+                                        <li className="flex gap-2"><CheckCircle size={16} className="text-saffron-500" /> Pure Vedic Rituals</li>
+                                        <li className="flex gap-2"><CheckCircle size={16} className="text-saffron-500" /> Transparent Dakshina</li>
+                                        <li className="flex gap-2"><CheckCircle size={16} className="text-saffron-500" /> Complete Satisfaction</li>
                                     </ul>
                                 </div>
 

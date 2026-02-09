@@ -35,16 +35,16 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
 
   return (
     <>
-      {/* Top Bar with Contact Info */}
-      <div className="bg-gradient-to-r from-red-900 to-orange-800 text-white text-sm py-2 hidden md:block">
+      {/* Top Bar with Contact Info - Re-designed to be darker/premium */}
+      <div className="bg-temple-maroon text-temple-cream text-sm py-2 hidden md:block border-b border-temple-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <a href={`tel:${PHONE_NUMBER}`} className="flex items-center space-x-2 hover:text-orange-200 transition-colors">
+            <a href={`tel:${PHONE_NUMBER}`} className="flex items-center space-x-2 hover:text-saffron-300 transition-colors font-serif tracking-wide">
               <Phone size={14} />
-              <span className="font-medium">+91 9767-443-308</span>
+              <span className="font-medium">+91 8956-270-196</span>
             </a>
-            <span className="text-orange-300">|</span>
-            <span className="text-orange-200">
+            <span className="text-temple-gold/50">|</span>
+            <span className="text-temple-gold">
               {lang === 'en' ? '📍 Trimbakeshwar, Nashik' : '📍 त्र्यंबकेश्वर, नासिक'}
             </span>
           </div>
@@ -54,11 +54,11 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
               </span>
-              <span className="text-xs">{lang === 'en' ? 'Available Now' : 'अभी उपलब्ध'}</span>
+              <span className="text-xs uppercase tracking-wider">{lang === 'en' ? 'Live Darshan Available' : 'लाइव दर्शन उपलब्ध'}</span>
             </span>
             <button
               onClick={() => setLang(lang === 'en' ? 'hi' : 'en')}
-              className="flex items-center space-x-1 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors"
+              className="flex items-center space-x-1 bg-white/5 hover:bg-white/10 px-3 py-1 rounded-full transition-colors border border-white/10"
             >
               <Languages size={14} />
               <span>{lang === 'en' ? 'हिन्दी' : 'English'}</span>
@@ -68,43 +68,43 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
       </div>
 
       {/* Main Navbar */}
-      <nav className={`fixed left-0 w-full z-50 transition-all duration-300 ${scrolled
-        ? 'top-0 bg-white/95 backdrop-blur-lg shadow-xl'
-        : 'top-0 md:top-9 bg-white/80 backdrop-blur-sm md:bg-transparent'
+      <nav className={`fixed left-0 w-full z-50 transition-all duration-500 border-b border-transparent ${scrolled
+        ? 'top-0 bg-white/95 backdrop-blur-xl shadow-2xl border-temple-gold/10 py-2'
+        : 'top-0 md:top-9 bg-transparent py-4'
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <div
-              className="flex items-center cursor-pointer group"
+              className={`flex items-center cursor-pointer group space-x-3`}
               onClick={() => setActivePage('home')}
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-3 shadow-lg group-hover:scale-105 transition-transform">
-                ॐ
+              <div className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg group-hover:rotate-12 transition-all duration-300 border-2 border-temple-gold ${scrolled ? 'bg-gradient-to-br from-saffron-600 to-temple-maroon' : 'bg-white/10 backdrop-blur-md'}`}>
+                <span className={scrolled ? 'text-white' : 'text-temple-gold'}>ॐ</span>
               </div>
-              <div>
-                <h1 className={`text-lg md:text-xl font-bold leading-tight transition-colors ${(scrolled || activePage !== 'home') ? 'text-red-900' : 'text-red-900 md:text-white'
+              <div className="flex flex-col">
+                <h1 className={`text-lg md:text-2xl font-serif font-black leading-none transition-colors ${scrolled ? 'text-temple-maroon' : 'text-white'
                   }`}>
-                  {lang === 'en' ? 'Pandit Shivnarayan' : 'पंडित शिवनारायण'}
+                  {lang === 'en' ? 'Pandit Nilesh' : 'पंडित नीलेश'}
                 </h1>
-                <p className={`text-xs uppercase tracking-widest font-bold ${(scrolled || activePage !== 'home') ? 'text-orange-600' : 'text-orange-600 md:text-orange-200'
+                <p className={`text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold mt-1 ${scrolled ? 'text-saffron-600' : 'text-temple-gold'
                   }`}>
-                  {lang === 'en' ? 'Trimbakeshwar Purohit' : 'त्र्यंबकेश्वर पुरोहित'}
+                  {lang === 'en' ? 'Guruji Trimbakeshwar' : 'गुरुजी त्र्यंबकेश्वर'}
                 </p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className={`hidden lg:flex items-center space-x-1 px-6 py-2 rounded-full transition-all duration-500 ${scrolled ? 'bg-transparent' : 'bg-black/20 backdrop-blur-md border border-white/10'}`}>
               {menuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActivePage(item.id)}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all ${activePage === item.id
-                    ? 'bg-orange-600 text-white shadow-lg'
-                    : (scrolled || activePage !== 'home')
-                      ? 'text-gray-700 hover:bg-orange-100 hover:text-orange-700'
-                      : 'text-gray-700 hover:bg-white/20 hover:text-gray-900 md:text-gray-200 md:hover:text-white'
+                  className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-300 ${activePage === item.id
+                    ? 'bg-temple-gold text-temple-maroon shadow-lg font-bold'
+                    : scrolled
+                      ? 'text-gray-600 hover:text-saffron-700 font-medium'
+                      : 'text-gray-200 hover:text-white hover:bg-white/10'
                     }`}
                 >
                   {item.label}
@@ -118,37 +118,36 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
                 href={`https://wa.me/${PHONE_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg"
+                className={`flex items-center justify-center w-10 h-10 rounded-full transition-all shadow-lg hover:scale-110 ${scrolled ? 'bg-green-600 text-white' : 'bg-white/10 text-white border border-white/20 hover:bg-green-600 hover:border-green-600'}`}
               >
-                <MessageCircle size={18} />
-                <span>WhatsApp</span>
+                <MessageCircle size={20} />
               </a>
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg animate-pulse"
+                className="flex items-center space-x-2 bg-gradient-to-r from-saffron-600 to-temple-maroon hover:from-saffron-500 hover:to-temple-maroon text-white px-6 py-3 rounded-full font-serif font-bold text-sm transition-all shadow-lg hover:shadow-saffron-500/50 hover:-translate-y-0.5"
               >
-                <Phone size={18} className="animate-bounce" />
+                <Phone size={16} />
                 <span>{t.nav.bookNow}</span>
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Fixed Visibility */}
             <div className="lg:hidden flex items-center space-x-3">
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full shadow-lg"
+                className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full shadow-lg"
               >
-                <Phone size={20} />
+                <Phone size={18} />
               </a>
               <button
                 onClick={() => setLang(lang === 'en' ? 'hi' : 'en')}
-                className="p-2 text-orange-600 bg-orange-50 rounded-full"
+                className={`p-2 rounded-full border ${scrolled ? 'border-gray-200 text-gray-600' : 'border-white/20 text-white bg-white/10'}`}
               >
                 <Languages size={20} />
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-orange-600 p-2"
+                className={`p-2 transition-colors ${scrolled ? 'text-temple-maroon' : 'text-white'}`}
               >
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
@@ -156,10 +155,17 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         {isOpen && (
-          <div className="lg:hidden bg-white border-t border-orange-100 shadow-2xl animate-slide-down">
-            <div className="p-4 space-y-2">
+          <div className="fixed inset-0 z-50 bg-temple-maroon/95 backdrop-blur-xl lg:hidden flex flex-col pt-24 px-6 animate-fade-in-up h-screen">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-6 right-6 text-white/50 hover:text-white p-2"
+            >
+              <X size={32} />
+            </button>
+
+            <div className="space-y-4">
               {menuItems.map((item) => (
                 <button
                   key={item.id}
@@ -167,32 +173,36 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activePage, setActivePag
                     setActivePage(item.id);
                     setIsOpen(false);
                   }}
-                  className={`block w-full text-left px-5 py-4 rounded-xl text-lg font-medium transition-all ${activePage === item.id
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'text-gray-700 hover:bg-orange-50'
+                  className={`block w-full text-left px-6 py-4 rounded-2xl text-xl font-serif font-medium transition-all ${activePage === item.id
+                    ? 'bg-gradient-to-r from-saffron-600 to-temple-maroon text-white shadow-xl border border-saffron-400/30'
+                    : 'text-white/70 hover:bg-white/5 hover:text-white'
                     }`}
                 >
-                  {item.label}
+                  <span className="flex items-center justify-between">
+                    {item.label}
+                    {activePage === item.id && <ChevronDown className="-rotate-90" size={20} />}
+                  </span>
                 </button>
               ))}
 
               {/* Mobile CTAs */}
-              <div className="pt-4 space-y-3 border-t border-gray-100 mt-4">
+              <div className="pt-8 space-y-4 border-t border-white/10 mt-8">
+                <p className="text-white/40 text-xs uppercase tracking-widest text-center font-bold mb-2">Get in Touch</p>
                 <a
                   href={`tel:${PHONE_NUMBER}`}
-                  className="flex items-center justify-center space-x-2 w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg"
+                  className="flex items-center justify-center space-x-3 w-full bg-white text-temple-maroon py-4 rounded-2xl font-bold text-lg shadow-lg"
                 >
                   <Phone size={24} />
-                  <span>{lang === 'en' ? 'Call: +91 9767443308' : 'कॉल करें: +91 9767443308'}</span>
+                  <span>Call Pandit Ji</span>
                 </a>
                 <a
                   href={`https://wa.me/${PHONE_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg"
+                  className="flex items-center justify-center space-x-3 w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg border border-green-500/50"
                 >
                   <MessageCircle size={24} />
-                  <span>WhatsApp</span>
+                  <span>WhatsApp Chat</span>
                 </a>
               </div>
             </div>

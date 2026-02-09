@@ -66,7 +66,7 @@ After performing Kaal Sarp Dosh Nivaran Puja:
 - Health issues get addressed
 - Overall life becomes smoother
 
-Contact Pandit Shivnarayan Guruji to get your horoscope analyzed and book your puja at an auspicious muhurat.
+Contact Pandit Nilesh Guruji to get your horoscope analyzed and book your puja at an auspicious muhurat.
     `,
         hi: `
 ## काल सर्प दोष क्या है?
@@ -93,7 +93,7 @@ Contact Pandit Shivnarayan Guruji to get your horoscope analyzed and book your p
 
 काल सर्प दोष का सबसे प्रभावी उपाय **त्र्यंबकेश्वर मंदिर** में काल सर्प दोष निवारण पूजा करना है। यह पवित्र मंदिर एकमात्र अधिकृत स्थान है जहां यह विशिष्ट पूजा पूर्ण वैदिक अनुष्ठानों के साथ की जा सकती है।
 
-पंडित शिवनारायण गुरुजी से संपर्क करें और अपनी कुंडली का विश्लेषण कराएं।
+पंडित नीलेश गुरुजी से संपर्क करें और अपनी कुंडली का विश्लेषण कराएं।
     `
     }
 };
@@ -119,26 +119,32 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
         const content = ARTICLE_CONTENT[selectedArticle]?.[lang] || ARTICLE_CONTENT[selectedArticle]?.en || '';
 
         return (
-            <div className="pt-32 pb-24 bg-spiritual min-h-screen">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Back button */}
-                    <button
-                        onClick={() => setSelectedArticle(null)}
-                        className="flex items-center space-x-2 text-orange-600 hover:text-orange-700 font-medium mb-8 group"
-                    >
-                        <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                        <span>{t.blog.backToList}</span>
-                    </button>
+            <div className="bg-spiritual min-h-screen">
+                {/* Article Header Hero */}
+                <div className="bg-maroon-900 pt-32 pb-16 relative">
+                    <div className="absolute inset-0 opacity-10 bg-[url('/pattern.png')]"></div>
+                    <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <button
+                            onClick={() => setSelectedArticle(null)}
+                            className="flex items-center space-x-2 text-gold-400 hover:text-white font-medium mb-8 group transition-colors"
+                        >
+                            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+                            <span>{t.blog.backToList}</span>
+                        </button>
 
-                    {/* Article header */}
+                        <span className="inline-block px-4 py-1 bg-white/10 text-gold-300 backdrop-blur-sm border border-gold-500/20 rounded-full text-sm font-bold mb-4">
+                            {article.category}
+                        </span>
+                        <h1 className="text-3xl md:text-5xl font-serif font-black text-white mb-6 leading-tight">
+                            {article.title}
+                        </h1>
+                    </div>
+                </div>
+
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    {/* Article content wrapper */}
                     <article>
                         <div className="mb-8">
-                            <span className="inline-block px-4 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-bold mb-4">
-                                {article.category}
-                            </span>
-                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                {article.title}
-                            </h1>
                             <div className="flex items-center space-x-6 text-gray-500 text-sm">
                                 <span className="flex items-center space-x-2">
                                     <Calendar size={16} />
@@ -159,12 +165,12 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                         />
 
                         {/* Article content */}
-                        <div className="prose prose-lg max-w-none prose-headings:text-red-900 prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-gray-900">
+                        <div className="prose prose-lg max-w-none prose-headings:text-maroon-900 prose-headings:font-serif prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-maroon-900">
                             {content.split('\n').map((line, idx) => {
                                 if (line.startsWith('## ')) {
-                                    return <h2 key={idx} className="text-2xl md:text-3xl font-bold text-red-900 mt-12 mb-6">{line.replace('## ', '')}</h2>;
+                                    return <h2 key={idx} className="text-2xl md:text-3xl font-serif font-bold text-maroon-900 mt-12 mb-6">{line.replace('## ', '')}</h2>;
                                 } else if (line.startsWith('### ')) {
-                                    return <h3 key={idx} className="text-xl md:text-2xl font-bold text-gray-900 mt-8 mb-4">{line.replace('### ', '')}</h3>;
+                                    return <h3 key={idx} className="text-xl md:text-2xl font-serif font-bold text-maroon-800 mt-8 mb-4">{line.replace('### ', '')}</h3>;
                                 } else if (line.startsWith('- ')) {
                                     return <li key={idx} className="ml-6 text-gray-700 mb-2">{line.replace('- ', '')}</li>;
                                 } else if (line.match(/^\d+\. \*\*/)) {
@@ -172,7 +178,7 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                                     if (match) {
                                         return (
                                             <p key={idx} className="text-gray-700 mb-2">
-                                                <strong className="text-gray-900">{match[1].replace(/\*\*/g, '')}</strong> - {match[2]}
+                                                <strong className="text-maroon-900">{match[1].replace(/\*\*/g, '')}</strong> - {match[2]}
                                             </p>
                                         );
                                     }
@@ -185,18 +191,18 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                         </div>
 
                         {/* CTA */}
-                        <div className="mt-16 bg-gradient-to-r from-red-900 to-orange-700 p-8 md:p-12 rounded-3xl text-white text-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                        <div className="mt-16 bg-gradient-to-r from-maroon-900 to-saffron-700 p-8 md:p-12 rounded-3xl text-white text-center">
+                            <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
                                 {lang === 'en' ? 'Ready to Remove This Dosh?' : 'क्या आप इस दोष को दूर करने के लिए तैयार हैं?'}
                             </h3>
-                            <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
+                            <p className="text-saffron-100 mb-8 max-w-2xl mx-auto">
                                 {lang === 'en'
-                                    ? 'Contact Pandit Shivnarayan Guruji for a free kundali analysis and book your puja at the sacred Trimbakeshwar Temple.'
-                                    : 'मुफ्त कुंडली विश्लेषण के लिए पंडित शिवनारायण गुरुजी से संपर्क करें और पवित्र त्र्यंबकेश्वर मंदिर में अपनी पूजा बुक करें।'}
+                                    ? 'Contact Pandit Nilesh Guruji for a free kundali analysis and book your puja at the sacred Trimbakeshwar Temple.'
+                                    : 'मुफ्त कुंडली विश्लेषण के लिए पंडित नीलेश गुरुजी से संपर्क करें और पवित्र त्र्यंबकेश्वर मंदिर में अपनी पूजा बुक करें।'}
                             </p>
                             <a
-                                href="https://wa.me/919767443308"
-                                className="inline-flex items-center space-x-2 bg-white text-red-900 px-8 py-4 rounded-full font-bold hover:bg-orange-100 transition-colors shadow-xl"
+                                href="https://wa.me/918956270196"
+                                className="inline-flex items-center space-x-2 bg-white text-maroon-900 px-8 py-4 rounded-full font-bold hover:bg-saffron-100 transition-colors shadow-xl"
                             >
                                 <span>{lang === 'en' ? 'Book Your Puja Now' : 'अभी पूजा बुक करें'}</span>
                                 <ChevronRight size={20} />
@@ -210,16 +216,20 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
 
     // Blog list view
     return (
-        <div className="pt-32 pb-24 bg-spiritual min-h-screen">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="text-center mb-16">
+        <div className="bg-spiritual min-h-screen">
+            {/* Hero Header */}
+            <div className="bg-maroon-900 pt-32 pb-16 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 bg-[url('/pattern.png')]"></div>
+                <div className="relative z-10 text-center max-w-7xl mx-auto px-4">
                     <div className="inline-flex items-center justify-center space-x-2 mb-4">
-                        <BookOpen className="text-orange-600" size={28} />
-                        <span className="text-orange-600 font-bold uppercase tracking-widest">{t.blog.title}</span>
+                        <BookOpen className="text-gold-400" size={28} />
+                        <span className="text-gold-400 font-bold uppercase tracking-widest text-sm">{t.blog.title}</span>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-4">{t.blog.subtitle}</h1>
+                    <h1 className="text-4xl md:text-6xl font-serif font-black text-white mt-4">{t.blog.subtitle}</h1>
                 </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
                 {/* Articles grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -236,7 +246,7 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                                     className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute top-4 left-4">
-                                    <span className="px-4 py-1 bg-white/90 backdrop-blur-sm text-orange-700 rounded-full text-sm font-bold">
+                                    <span className="px-4 py-1 bg-white/95 backdrop-blur-sm text-maroon-800 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
                                         {article.category}
                                     </span>
                                 </div>
@@ -254,7 +264,7 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                                     </span>
                                 </div>
 
-                                <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors leading-tight">
+                                <h2 className="text-xl font-serif font-bold text-gray-900 mb-3 group-hover:text-maroon-700 transition-colors leading-tight">
                                     {article.title}
                                 </h2>
 
@@ -262,7 +272,7 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                                     {article.excerpt}
                                 </p>
 
-                                <button className="flex items-center space-x-2 text-orange-600 font-bold group-hover:text-red-700 transition-colors">
+                                <button className="flex items-center space-x-2 text-saffron-600 font-bold group-hover:text-maroon-700 transition-colors">
                                     <span>{t.blog.readMore}</span>
                                     <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                 </button>
@@ -278,12 +288,12 @@ const Blog: React.FC<BlogProps> = ({ lang }) => {
                     </h3>
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         {lang === 'en'
-                            ? 'Have questions about doshas, pujas, or spiritual matters? Contact us for personalized guidance from Pandit Shivnarayan Guruji.'
-                            : 'क्या आपके पास दोषों, पूजाओं, या आध्यात्मिक मामलों के बारे में प्रश्न हैं? पंडित शिवनारायण गुरुजी से व्यक्तिगत मार्गदर्शन के लिए संपर्क करें।'}
+                            ? 'Have questions about doshas, pujas, or spiritual matters? Contact us for personalized guidance from Pandit Nilesh Guruji.'
+                            : 'क्या आपके पास दोषों, पूजाओं, या आध्यात्मिक मामलों के बारे में प्रश्न हैं? पंडित नीलेश गुरुजी से व्यक्तिगत मार्गदर्शन के लिए संपर्क करें।'}
                     </p>
                     <a
-                        href="https://wa.me/919767443308"
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-800 to-orange-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all"
+                        href="https://wa.me/918956270196"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-maroon-800 to-saffron-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all"
                     >
                         <span>{lang === 'en' ? 'Ask Your Question' : 'अपना प्रश्न पूछें'}</span>
                         <ChevronRight size={20} />

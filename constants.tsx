@@ -2,8 +2,8 @@
 import React from 'react';
 import { ShieldCheck, Calendar, BookOpen, UserCheck } from 'lucide-react';
 
-export const PHONE_NUMBER = "919767443308";
-export const EMAIL = "shivanarayanguruji@gmail.com";
+export const PHONE_NUMBER = "8956270196";
+export const EMAIL = "panditnileshguruji@gmail.com";
 export const ADDRESS = "Trimbakeshwar Temple, Nashik, Maharashtra, India - 422212";
 export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER}`;
 
@@ -34,7 +34,7 @@ export const TESTIMONIALS = [
   {
     name: "Rajesh Sharma",
     location: "Mumbai",
-    text: "Pandit Shivnarayan Ji performed the Kaal Sarp Puja very authentically. I felt immediate relief in my professional life. Within 3 months, I got a promotion that I was waiting for 2 years!",
+    text: "Pandit Nilesh Guruji performed the Kaal Sarp Puja very authentically. I felt immediate relief in my professional life. Within 3 months, I got a promotion that I was waiting for 2 years!",
     rating: 5,
     puja: "Kaal Sarp Dosh Nivaran"
   },

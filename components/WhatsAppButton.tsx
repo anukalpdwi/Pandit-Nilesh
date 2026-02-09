@@ -60,7 +60,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ lang = 'en' }) => {
                 ॐ
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 text-sm">Pandit Shivnarayan Ji</h4>
+                <h4 className="font-bold text-gray-900 text-sm">Pandit Nilesh Guruji</h4>
                 <p className="text-xs text-green-600 font-medium flex items-center space-x-1">
                   <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
                   <span>{lang === 'en' ? 'Online' : 'ऑनलाइन'}</span>

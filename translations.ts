@@ -10,9 +10,28 @@ export const translations = {
       blog: "Articles",
       bookNow: "Book Puja"
     },
+    home: {
+      hero: {
+        cta: {
+          call: "Call Guruji",
+          book: "View Services"
+        }
+      },
+      services: {
+        subtitle: "Divine Rituals",
+        title: "Our Sacred Pujas"
+      },
+      testimonials: {
+        subtitle: "Devotee Experiences",
+        title: "What Devotees Say"
+      },
+      faq: {
+        title: "Frequently Asked Questions"
+      }
+    },
     hero: {
       welcome: "Welcome to Trimbakeshwar Jyotirlinga",
-      name: "Pandit Shivnarayan Guruji",
+      name: "Pandit Nilesh Guruji",
       subtitle: "Authorized Vedic Purohit performing ancient rituals for peace, prosperity, and liberation from Doshas at the sacred Trimbakeshwar Temple.",
       cta_pujas: "Book a Puja",
       cta_call: "Call Now",
@@ -22,8 +41,8 @@ export const translations = {
     about: {
       title: "Spiritual Legacy & Experience",
       heading: "Authentic Vedic Rituals For Peace & Prosperity",
-      description: "Pandit Shivnarayan Guruji belongs to a traditional family of priests serving at the Trimbakeshwar Temple for generations. With over 15+ years of experience, he specializes in Kalsarp Dosh Nivaran, Narayan Nagbali, and Pitra Dosh Puja, performing rituals strictly according to Vedic scriptures.",
-      fullDescription: "Born into a revered family of temple priests at the sacred Trimbakeshwar Jyotirlinga, Pandit Shivnarayan Guruji has devoted his life to the ancient Vedic traditions. Having studied under eminent scholars of Sanskrit and Veda Shastra, he possesses deep knowledge of all 16 Sanskars and specialized rituals for dosh nivaran. His expertise lies in performing complex ceremonies like Narayan Nagbali, Kaal Sarp Dosh Nivaran, and Pitra Shanti with complete adherence to traditional Vedic procedures.",
+      description: "Pandit Nilesh Guruji belongs to a traditional family of priests serving at the Trimbakeshwar Temple for generations. With over 15+ years of experience, he specializes in Kalsarp Dosh Nivaran, Narayan Nagbali, and Pitra Dosh Puja, performing rituals strictly according to Vedic scriptures.",
+      fullDescription: "Born into a revered family of temple priests at the sacred Trimbakeshwar Jyotirlinga, Pandit Nilesh Guruji has devoted his life to the ancient Vedic traditions. Having studied under eminent scholars of Sanskrit and Veda Shastra, he possesses deep knowledge of all 16 Sanskars and specialized rituals for dosh nivaran. His expertise lies in performing complex ceremonies like Narayan Nagbali, Kaal Sarp Dosh Nivaran, and Pitra Shanti with complete adherence to traditional Vedic procedures.",
       stats_years: "15+ Years Exp.",
       stats_pujas: "10,000+ Pujas",
       stats_devotees: "50,000+ Devotees",
@@ -150,7 +169,7 @@ export const translations = {
       quickLinks: "Quick Links",
       services: "Our Services",
       contact: "Contact Us",
-      copyright: "© 2026 Pandit Shivnarayan Guruji. All rights reserved.",
+      copyright: "© 2026 Pandit Nilesh Guruji. All rights reserved.",
       designedBy: "Trusted by thousands of devotees worldwide"
     },
     common: {
@@ -171,9 +190,28 @@ export const translations = {
       blog: "लेख",
       bookNow: "पूजा बुक करें"
     },
+    home: {
+      hero: {
+        cta: {
+          call: "गुरुजी को कॉल करें",
+          book: "सेवाएं देखें"
+        }
+      },
+      services: {
+        subtitle: "दिव्य अनुष्ठान",
+        title: "हमारी पवित्र पूजाएं"
+      },
+      testimonials: {
+        subtitle: "भक्तों के अनुभव",
+        title: "भक्त क्या कहते हैं"
+      },
+      faq: {
+        title: "अक्सर पूछे जाने वाले प्रश्न"
+      }
+    },
     hero: {
       welcome: "त्र्यंबकेश्वर ज्योतिर्लिंग में आपका स्वागत है",
-      name: "पंडित शिवनारायण गुरुजी",
+      name: "पंडित नीलेश गुरुजी",
       subtitle: "पवित्र त्र्यंबकेश्वर मंदिर में दोषों से शांति, समृद्धि और मुक्ति के लिए प्राचीन अनुष्ठान करने वाले अधिकृत वैदिक पुरोहित।",
       cta_pujas: "पूजा बुक करें",
       cta_call: "अभी कॉल करें",
@@ -183,8 +221,8 @@ export const translations = {
     about: {
       title: "आध्यात्मिक विरासत और अनुभव",
       heading: "शांति और समृद्धि के लिए प्रामाणिक वैदिक अनुष्ठान",
-      description: "पंडित शिवनारायण गुरुजी पीढ़ियों से त्र्यंबकेश्वर मंदिर में सेवा करने वाले पुजारियों के एक पारंपरिक परिवार से हैं। 15+ वर्षों के अनुभव के साथ, वह कालसर्प दोष निवारण, नारायण नागबली और पितृ दोष पूजा में विशेषज्ञ हैं।",
-      fullDescription: "पवित्र त्र्यंबकेश्वर ज्योतिर्लिंग में मंदिर के पुजारियों के एक सम्मानित परिवार में जन्मे, पंडित शिवनारायण गुरुजी ने अपना जीवन प्राचीन वैदिक परंपराओं को समर्पित किया है। संस्कृत और वेद शास्त्र के प्रख्यात विद्वानों के अंतर्गत अध्ययन करने के बाद, उन्हें सभी 16 संस्कारों और दोष निवारण के लिए विशेषीकृत अनुष्ठानों का गहन ज्ञान है।",
+      description: "पंडित नीलेश गुरुजी पीढ़ियों से त्र्यंबकेश्वर मंदिर में सेवा करने वाले पुजारियों के एक पारंपरिक परिवार से हैं। 15+ वर्षों के अनुभव के साथ, वह कालसर्प दोष निवारण, नारायण नागबली और पितृ दोष पूजा में विशेषज्ञ हैं।",
+      fullDescription: "पवित्र त्र्यंबकेश्वर ज्योतिर्लिंग में मंदिर के पुजारियों के एक सम्मानित परिवार में जन्मे, पंडित नीलेश गुरुजी ने अपना जीवन प्राचीन वैदिक परंपराओं को समर्पित किया है। संस्कृत और वेद शास्त्र के प्रख्यात विद्वानों के अंतर्गत अध्ययन करने के बाद, उन्हें सभी 16 संस्कारों और दोष निवारण के लिए विशेषीकृत अनुष्ठानों का गहन ज्ञान है।",
       stats_years: "15+ साल का अनुभव",
       stats_pujas: "10,000+ पूजाएं",
       stats_devotees: "50,000+ श्रद्धालु",
@@ -311,7 +349,7 @@ export const translations = {
       quickLinks: "त्वरित लिंक",
       services: "हमारी सेवाएं",
       contact: "संपर्क करें",
-      copyright: "© 2026 पंडित शिवनारायण गुरुजी। सर्वाधिकार सुरक्षित।",
+      copyright: "© 2026 पंडित नीलेश गुरुजी। सर्वाधिकार सुरक्षित।",
       designedBy: "दुनिया भर के हजारों श्रद्धालुओं द्वारा विश्वसनीय"
     },
     common: {
