@@ -1,0 +1,7 @@
+{
+  "name": "Pandit Shivnarayan Guruji - Trimbakeshwar",
+  "description": "Official website for Pandit Shivnarayan Guruji, providing authentic Vedic pujas like Kaal Sarp Dosh Nivaran and Narayan Nagbali at Trimbakeshwar Jyotirlinga.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
