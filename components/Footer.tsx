@@ -207,6 +207,49 @@ const Footer: React.FC<FooterProps> = ({ lang, setActivePage }) => {
           </p>
         </div>
       </div>
+
+      {/* Developer Credit Banner */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pb-8">
+        <div className="bg-cream-50/5 border border-gold-500/10 rounded-2xl p-4 md:p-6 backdrop-blur-sm">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Left side: Developer Info */}
+            <div className="flex flex-col items-center md:items-start space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">
+                Designed & Developed By
+              </span>
+              <div className="flex items-center space-x-2 text-sm md:text-base">
+                <span className="font-bold text-gray-300">Anukalp Dwivedi</span>
+                <span className="text-gold-500/40">•</span>
+                <a 
+                  href="https://goldenbirdtech.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-bold text-saffron-500 hover:text-saffron-400 transition-colors"
+                >
+                  The Goldenbird Tech
+                </a>
+              </div>
+            </div>
+
+            {/* Middle: Separator (Hidden on mobile) */}
+            <div className="hidden md:block w-px h-10 bg-gold-500/20"></div>
+
+            {/* Right side: Contact for Website/Ads */}
+            <div className="flex flex-col items-center md:items-end space-y-1">
+              <span className="text-xs text-gray-400">
+                वेबसाइट और गूगल Ads के लिए संपर्क करें
+              </span>
+              <a 
+                href="tel:+919131883433"
+                className="flex items-center space-x-2 text-lg md:text-xl font-bold text-saffron-500 hover:text-saffron-400 transition-colors"
+              >
+                <Phone size={18} className="text-saffron-500" />
+                <span>+91 9131883433</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
